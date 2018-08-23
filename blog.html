@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114813025-1"></script>
+    <script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-114813025-1');
+    </script>
+</head>
+<body>
+    <style>
+      html {
+        font-size: 16px;
+      }
+      body {
+        background: url(blogbg.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      #title-container{
+          background-color: rgb(108, 102, 136);
+          width: 300px;
+          margin: 0 auto;
+          border-radius: 10px;
+          margin-bottom: 20px;
+          color: white;
+      }
+      .title {
+        text-align: center;
+        margin-top: 80px;
+        font-size: 60px;
+      }
+      #logo {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+      }
+      table {
+        border: 5px solid rgba(38, 76, 179, 0.6);
+        border-radius: 10px;
+        width: 420px;
+        height: 400px;
+        margin: 0 auto;
+        background-color: rgb(108, 102, 136);
+      }
+      td {
+        border: 1px solid white;
+        border-radius: 10px;
+        padding: .4rem;
+      }
+      th {
+        font-size: 20px;
+      }
+      #buttons input {
+        padding: .5rem;
+        margin: 0 1rem;
+        margin-left: 20%;
+      }
+      .hidden {
+        display: none;
+      }
+      .button {
+        background-color: white;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+      img {
+        margin: 0 auto;
+        display: block;
+        height: 20px;
+      } 
+      input[type=submit] {
+      color: white;
+      padding:5px 15px; 
+      background: rgba(38, 76, 179, 0.6); 
+      border:0 none;
+      cursor:pointer;
+      -webkit-border-radius: 10px;
+      border-radius: 10px; 
+      }
+      #outputText {
+        color: orange;
+        margin-bottom: 1rem;
+        text-align: center;
+        background-color: rgba(38, 76, 179, 0.6);
+        border-radius: 50px;
+        width: 400px;
+        margin: 0 auto;
+      } 
+      .output-box {
+        margin-top: 1rem;
+        display: block;
+        width: auto;
+        height: auto;
+        color: white;
+        background-color: white;
+        border: solid 3px yellow;
+        padding: 2rem;
+      }
+      .post {
+          border: solid rgba(38, 76, 179, 0.6);
+          border-radius: 10px;
+          background-color: rgb(108, 102, 136);
+          width: 50%;
+          height: auto;
+          color: white;
+          margin: 0 auto;
+          padding: 20px;
+          margin-bottom: 10px;
+      }
+      .output-box p {
+        padding-left: 1rem;
+      }
+      input{
+          border-radius: 10px;
+      }
+      #message{
+          border-radius: 10px;
+      }
+    </style>
+    <body>
+      <div id="title-container">
+      <div class="title">My Blog</div>
+      </div>
+      <img id="logo" src="mk.png">
+      <form id="mainForm"  action="blog.aspx" method="post" >
+      <table id="table">
+        <tr>
+          <th>Create A New Post</th>
+        </tr>
+        <tr>
+          <td colspan="2">
+            *Email: <br> <input type="text" name="email"> <br>
+             *Title of Post: <br> <input type="text" name="title"> <br>
+            *Message: <br>
+            <textarea name="blogtxt" id="message" cols="50" rows="8"></textarea><br><br>
+            <center>
+              <input type="submit" value="Submit">
+              </center>
+          </td>
+        </tr> 
+      </table><br>
+      <center>
+        <a href="company.html" style="color:white;">Back to Company Homepage</a>
+      </center><br>
+    </body>
+  </html>
