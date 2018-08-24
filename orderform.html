@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OrderForm</title>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114813025-1"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-114813025-1');
+</script>
+</head>
+<script language="javascript">
+function checkinfo()
+{
+    errflag=false;
+	errmsg="";
+	confirmmsg="";
+//checks first name
+    if(document.form.txtname.value=="")
+    {
+        errflag=true;
+        errmsg=errmsg+"Missing Name<br/>";
+    }
+    else
+    {
+        confirmmsg=confirmmsg+"Name:"+document.form.txtname.value+"<br/>";
+    }
+//checks phone
+	if(document.form.txtphone.value=="")
+	{
+		errflag=true;
+		errmsg=errmsg+"Missing Phone<br/>";
+	}
+	else
+	{
+		confirmmsg=confirmmsg+"Phone:"+document.form.txtphone.value+"<br/>";
+	}
+//checks email
+	if(document.form.txtemail.value=="")
+	{
+		errflag=true;
+		errmsg=errmsg+"Missing email<br/>";
+	}
+	else
+	{
+		confirmmsg=confirmmsg+"Email:"+document.form.txtemail.value+"<br/>";
+	}
+//checks billing info
+	if(document.form.txtarea1.value=="")
+	{
+		errflag=true;
+		errmsg=errmsg+"Missing Billing Information<br/>";
+	}
+	else
+	{
+		confirmmsg=confirmmsg+"Billing Information:"+document.form.txtarea1.value+"<br/>";
+	}
+//checks shipping info
+	if(document.form.txtarea2.value=="")
+	{
+		errflag=true;
+		errmsg=errmsg+"Missing Shipping Information<br/>";
+	}
+	else
+	{
+		confirmmsg=confirmmsg+"Shipping Information:"+document.form.txtarea2.value+"<br/>";
+	}
+//checks credit card/check number
+	if(document.form.txtnum.value=="")
+	{
+		errflag=true;
+		errmsg=errmsg+"Missing credit card/check number<br/>";
+	}
+	else
+	{
+		if(document.form.selectpayment.value=="check")
+		{
+			confirmmsg=confirmmsg+"Check Number:"+document.form.txtnum.value+"<br/>";
+		}
+		if(document.form.selectpayment.value=="card")
+		{
+			confirmmsg=confirmmsg+"Credit Card Number:"+document.form.txtnum.value+"<br/>";
+		}
+	}
+	//displays total cost
+	if(document.form.txttotal.value>0)
+	{
+		confirmmsg=confirmmsg+"Total Cost: $"+document.form.txttotal.value+"<br/>";
+	}
+	//display quantity of each item
+	if(document.form.qt1.value>0)
+	{
+		confirmmsg=confirmmsg+"Quantity of 2008 Sport Air Sting Sport: "+document.form.qt1.value+"<br/>";
+	}
+	if(document.form.qt2.value>0)
+	{
+		confirmmsg=confirmmsg+"Quantity of 2007 Lancair IV-P Turbine: "+document.form.qt2.value+"<br/>";
+	}
+	if(document.form.qt3.value>0)
+	{
+		confirmmsg=confirmmsg+"Quantity of 2016 Airbus H125: "+document.form.qt3.value+"<br/>";
+	}
+	if(document.form.qt4.value>0)
+	{
+		confirmmsg=confirmmsg+"Quantity of 1995 AS350B2: "+document.form.qt4.value+"<br/>";
+	}
+	if(document.form.qt5.value>0)
+	{
+		confirmmsg=confirmmsg+"Quantity of Cessna Citation XLS+: "+document.form.qt5.value+"<br/>";
+	}
+
+    if(errflag==true)
+    {
+	    document.writeln(errmsg);
+    }
+    else
+    {
+        document.writeln("<b>Order Complete<br/>Thank You!</b><br/><br/>"+confirmmsg);
+    }
+}
+
+function calculateTotal()
+{
+	total=0;
+	if(document.form.qt1.value=="" && document.form.qt2.value=="" && document.form.qt3.value=="" && 
+	document.form.qt4.value=="" && document.form.qt5.value=="")
+	{
+		alert("Missing Quantity");
+	}else if(document.form.qt1.value<0 || document.form.qt2.value<0 || document.form.qt3.value<0
+		  || document.form.qt4.value<0 || document.form.qt5.value<0)
+	{
+		alert("No Negative Numbers");
+	}else
+	{
+		if(document.form.qt1.value>0){
+			total=total+(document.form.qt1.value*79000);
+			document.form.cost1.value=(document.form.qt1.value*79000);
+			document.form.txttotal.value=total;
+    	}
+    	if(document.form.qt2.value>0){
+			total=total+(document.form.qt2.value*300000);
+			document.form.cost2.value=(document.form.qt2.value*300000);
+			document.form.txttotal.value=total;
+    	}
+    	if(document.form.qt3.value>0){
+			total=total+(document.form.qt3.value*2500000);
+			document.form.cost3.value=(document.form.qt3.value*2500000);
+			document.form.txttotal.value=total;
+    	}   
+		if(document.form.qt4.value>0){
+			total=total+(document.form.qt4.value*850000);
+			document.form.cost4.value=(document.form.qt4.value*850000);
+			document.form.txttotal.value=total;
+    	}    
+		if(document.form.qt5.value>0){
+			total=total+(document.form.qt5.value*5695000);
+			document.form.cost5.value=(document.form.qt5.value*5695000);
+    	    document.form.txttotal.value=total;
+		}
+	}
+}
+</script>
+<h1>MK Aviation</h1>
+<body>
+  <form name="form" action="">
+  <fieldset>
+      <legend><b>Order Form</b></legend>
+      *Name:<input type="text" name="txtname">
+      *Phone:<input type="text" name="txtphone">
+      *E-mail address:<input type="text" name="txtemail"><br><br>
+      *Billing Address<input type="checkbox" name="chkship">Ship to Billing Address
+      &emsp;*Shipping Address<br>
+      <textarea cols="37" rows="3" name="txtarea1"></textarea>&nbsp;
+      <textarea cols="37" rows="3" name="txtarea2"></textarea><br><br>
+	  
+	  Qty:<input type="text" name="qt1">Cost:<input type="text" name="cost1">2008 Sport Air Sting Sport ($79,000 ea.)<br>
+	  Qty:<input type="text" name="qt2">Cost:<input type="text" name="cost2">2007 Lancair IV-P Turbine ($300,000 ea.)<br>
+	  Qty:<input type="text" name="qt3">Cost:<input type="text" name="cost3">2016 Airbus H125 ($2,500,000 ea.)<br>
+	  Qty:<input type="text" name="qt4">Cost:<input type="text" name="cost4">1995 AS350B2 ($850,000 ea.)<br>
+	  Qty:<input type="text" name="qt5">Cost:<input type="text" name="cost5">Cessna Citation XLS+ ($5,695,000 ea.)
+		
+      <br><br>Total Cost:<input type="text" name="txttotal"><br><br>
+      Methods of Payment:<select name="selectpayment">
+            <option value="check">Check</option>
+            <option value="card">Card</option>
+        </select><br>
+      *Credit Card or Check Number:<input type="text" name="txtnum"><br><br>
+      <input type="button" name="calculate" value="Calculate Price" onclick="calculateTotal(); ">
+      <input type="button" name="send" value="Send Your Order" onclick="checkinfo()">
+      <input type="reset" name="reset" value="Start Over">
+	</fieldset>
+  </form>
+  <br>
+  <a href="company.html">Back to our Home Page</a>
+</body>
+</html>

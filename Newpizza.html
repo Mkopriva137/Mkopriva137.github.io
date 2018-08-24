@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>New Pizza</title>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114813025-1"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-114813025-1');
+</script>
+    <style>
+        body{
+            background: url(pizza1.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        table tr td{
+            background-color: rgba(97, 51, 6, 0.952);
+            border: 3px solid black;
+            border-collapse: collapse;
+            border-radius: 4px;
+        }
+        table button{
+            font-size: 5px;
+            display: inline-block;
+            background-color:  rgb(80, 75, 70);
+        }
+        #button {
+            background-color: rgba(0, 0, 0, 0.705);
+            color: white;
+            display: inline-block;
+            font-size: 26px;
+            border-radius: 10px;
+            border-collapse: collapse;
+        }
+        #container {
+            height: 900px;
+            width: 740px;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.671);
+            border-radius: 15px;
+        }
+        img {
+            padding-top: 20px;
+            width: 50%;
+        }
+        #total{
+            width:115px;
+            margin-left: 5px;
+        }
+        #buttontot{
+            background-color: rgba(0, 0, 0, 0.705);
+            color: white;
+            font-size: 16px;
+            border-radius: 10px;
+            border-collapse: collapse;
+            margin-left: 5px;
+        }
+		a{
+			color:white;
+		}
+    </style>
+</head>
+<body style="font-family: helvetica">
+    <div id="container">
+        <center><img src="pizza3.jpg"></center><br>
+        <form action="Newpizza.aspx" method="post" name="form" id="pizzaform">
+            <table border=1 height="700" width="700" align="center">
+                <tr height="50">
+                    <td colspan=2><center><b><font size="5">Please fill in the following information</font></b></center></td>
+                </tr>
+                <tr height="125">
+                    <td colspan=2 align="center">
+                        Full Name:<input type="text" id="name" name="txtname">&nbsp;
+                        Phone Number:<input type="text" id="phone" name="txtphone"><br><br>
+                        Address:<input type="text" id="address" name="txtaddress">&nbsp;
+                        City:<input type="text" id="city" name="txtcity">&nbsp;
+                        Zip:<input type="text" id="zip" name="txtzip">
+                    </td>
+                </tr>
+                <tr height="50">
+                    <td colspan=2><center><b><font size="5">Build your pizza</font></b></center></td>
+                </tr>
+                <tr height="160" valign="top">
+                    <td width="250">
+                        <center><font size="5"><b>Select a size:</b></font></center><br><br>
+                        <br><center>
+                            Small:<input type="radio" name="radio" value="small">$5.00<br><br>
+                            Medium:<input type="radio" name="radio" value="medium">$7.50<br><br>
+                            Large:<input type="radio" name="radio" value="large">$10.00</center>
+                    </td>
+                    <td>
+                        <center>
+                            <font size="5">
+                                <b>
+                                    Select your toppings:<br>
+                                    (Additional $1.00 for each)
+                                </b>
+                            </font>
+                        </center><br><br>
+                        <center>
+                            Pepperoni<input type="checkbox" name="pepperoni" value="pepperoni" id="pepperoni">&emsp;&emsp;&emsp;&nbsp;
+                            Sausage<input type="checkbox" name="sausage" value="sausage" id="sausage"><br><br>
+                            Mushrooms<input type="checkbox" name="mushroom" value="mushroom" id="mushroom">&emsp;&emsp;
+                            Extra cheese<input type="checkbox" name="cheese" value="cheese" id="cheese">
+                        </center>
+                </tr>
+                <tr height="10%">
+                    <td colspan=2>
+                        <center>
+                        <input type="button" id="buttontot" value="Calculate Total" onclick="calctotal()"><br />
+                        <input type="text" name="txttotal" id="total"/><br /><br />
+                            <input type="reset" id="button">&emsp;
+                            <input type="submit" id="button">
+                        </center>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+<center>
+<a href="company.html">Back to our Home Page</a>
+</center>
+</body>
+</html>

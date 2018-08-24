@@ -1,0 +1,22 @@
+/*@media (min-width: 768px){*/
+body{
+    background: url(pizza1.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+
+
+table tr td{
+    background-color: rgba(97, 51, 6, 0.952);
+    border: 3px solid black;
+    border-collapse: collapse;
+    border-radius: 4px;
+}
+
+table button{
+    font-size: 5px;
+    display: inline-block;
+    background-color:  rgb(80, 75, 70);
+}

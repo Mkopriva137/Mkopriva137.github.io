@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>New Registration</title>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114813025-1"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-114813025-1');
+</script>
+</head>
+<body bgcolor="#B3B3B3">
+    <h1>Registration</h1>
+    <form name="form1" method="post" action="New_reg.aspx">
+        <table border=2 height="700" width="700" bgcolor="white">
+            <tr>
+                <td>*First Name:</td>
+                <td>
+                    <input type="text" name="txtfirstname">
+                    *Last Name:<input type="text" name="txtlastname">
+                </td>
+            </tr>
+            <tr>
+                <td>*Address:</td>
+                <td><input type="text" name="txtaddress"></td>
+            </tr>
+            <tr>
+                <td>*City:</td>
+                <td>
+                    <input type="text" name="txtcity">
+                    *State: <input type="text" name="txtstate" size="3">
+                    *Zip: <input type="text" name="txtzip" size="5">
+            </tr>
+            <tr>
+                <td>*Country:</td>
+                <td><input type="text" name="txtcountry"></td>
+            </tr>
+            <tr>
+                <td>Product:</td>
+                <td>
+                    <select name="selectproduct">
+                        <option value="1">2008 Sport Air Sting Sport</option>
+                        <option value="2">2007 Lancair IV-P Turbine</option>
+                        <option value="3">2016 Airbus H125</option>
+                        <option value="4">1995 AS350B2</option>
+                        <option value="5">Cessna Citation XLS+</option>
+                    </select>
+            </tr>
+            <tr>
+                <td>*Date Purchased:</td>
+                <td><input type="text" name="txtdate"></td>
+            </tr>
+            <tr>
+                <td>*Rate Shopping Experience:</td>
+                <td>
+                    Not Satisfied<input type="radio" name="rdrate" value="1">1
+                    <input type="radio" name="rdrate" value="2">2
+                    <input type="radio" name="rdrate" value="3">3
+                    <input type="radio" name="rdrate" value="4">4
+                    <input type="radio" name="rdrate" value="5">5 Very Satisfied
+                </td>
+            </tr>
+            <tr>
+                <td>*What made the experience good/bad?:</td>
+                <td><textarea cols=80 rows=6 name="txtarea1"></textarea></td>
+            </tr>
+            <tr>
+                <td>*Favorite type(s) of aircraft:</td>
+                <td>
+                    <input type="checkbox" name="chkjet" value="jet">Jet
+                    <br><input type="checkbox" name="chkairplane" value="airplane">Airplane
+                    <br><input type="checkbox" name="chkhelicopter" value="helicopter">Helicopter
+                </td>
+            </tr>
+            <tr>
+                <td colspan=2>
+                    <center>
+                        <input type="submit">
+                        <input type="reset">
+                    </center>
+                </td>
+            </tr>
+        </table><br>
+    </form>
+     <a href="company.html">Back to our Home Page</a>
+</body>
+</html>
